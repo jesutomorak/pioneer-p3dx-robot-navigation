@@ -143,7 +143,7 @@ pioneer-p3dx-robot-navigation/
 
 ## Running the code
 
-The two Java classes depend on the university-provided project environment,
+The two Java classes depend on the project environment,
 including:
 
 - `robot.Robot`
