@@ -17,7 +17,19 @@ import java.util.Arrays;
  * email    : ttheod@gmail.com
  * Comments : The class contains lab example solutions for the Term assignment.
  **/
-
+/*
+ * Coursework implementation and modifications by Jesutomito Morakinyo:
+ *
+ * - waypoint and odometry navigation;
+ * - angular and linear destination checks;
+ * - sonar-based obstacle avoidance;
+ * - visual target tracking;
+ * - sonar coordinate transformation and mapping;
+ * - route and end-zone configuration;
+ * - experimental testing and performance analysis.
+ *
+ * The university framework attribution above is retained.
+ */
 public class LabExercises
 {
     private Robot robot;
@@ -190,12 +202,13 @@ public class LabExercises
     }
 
    /**
-    * Method     : LabExercises::avoid()
-    * Purpose    : To implement an obstacle avoidance and collision detection algorithm. The escape method is not implemented here.
-    * Parameters : - vel : The robot velocity.
-    * Returns    : true if an obstacle is detected, false otherwise.
-    * Notes      : None.
-    **/
+ * Method     : LabExercises::avoid()
+ * Purpose    : To implement sonar-based obstacle avoidance and a simple
+ *              collision-escape behaviour.
+ * Parameters : vel - The robot velocity.
+ * Returns    : True if an obstacle is detected, false otherwise.
+ * Notes      : Uses the front sonar sensors to detect nearby obstacles.
+ */
     public boolean avoid(double vel)
     {
         double l_vec[] = {
