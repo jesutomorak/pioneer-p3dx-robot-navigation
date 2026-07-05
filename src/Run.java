@@ -12,6 +12,14 @@ import utils.Delay;
  * Comments : To run the Aria run interface for both, simulator and real robot.
  **/
 
+/*
+ * Coursework control flow and experiment configuration by
+ * Jesutomito Morakinyo.
+ *
+ * This class coordinates the waypoint-navigation, target-tracking,
+ * obstacle-avoidance and mapping phases implemented for the assignment.
+ */
+
 public class Run
 {
     private static Robot robot;
@@ -70,10 +78,10 @@ public class Run
                  exercise.track(100.0);           //track
                  shutdownFlag = exercise.endZone(robot.kinematics.getX(),robot.kinematics.getY()); //shutdown flag is true when the end zone is reached
 
-                 if(shutdownFlag)                //if shutdown flag is true
-                 {
+                 if(shutdownFlag) {
                  robot.shutDown();               //shutdown the robot
                  System.out.println("Tracking complete");
+                 break;
                  }
              }
 
