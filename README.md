@@ -2,7 +2,7 @@
 
 **Author:** Jesutomito Morakinyo  
 **Project type:** University robotics coursework  
-**Platform:** Pioneer P3-DX using a university-provided ARIA/Java framework
+**Platform:** Pioneer P3-DX using an ARIA/Java framework
 
 ## Project overview
 
@@ -12,7 +12,7 @@ then tracks a visual target while using sonar sensing for obstacle avoidance.
 The program also transforms sonar measurements into global coordinates for
 mapping and plots the robot's movement through the environment.
 
-The university framework supplied the robot, sensor, control and plotting
+The framework supplied the robot, sensor, control and plotting
 interfaces. My project contribution focused on:
 
 - defining and implementing the waypoint-navigation behaviour;
@@ -156,7 +156,7 @@ including:
 
 These framework files and libraries are not included in this repository.
 To run the project, place `LabExercises.java` and `Run.java` in the original
-university framework project, configure the Pioneer/ARIA simulator or robot
+framework project, configure the Pioneer/ARIA simulator or robot
 connection and run `Run.java`.
 
 ## Scope
