@@ -50,7 +50,7 @@ Robot shutdown
 
 ### Waypoint navigation
 
-`navigate()` uses a state-based `TURN → MOVE → AVOID` sequence. At each
+`navigate()` uses TURN and MOVE states for waypoint navigation. An AVOID state is also defined in the source, while the active program flow calls the obstacle-avoidance method separately during the tracking phase from `Run.java`. At each
 waypoint, the robot:
 
 1. calculates the required heading with `atan2`;
@@ -65,9 +65,7 @@ The planned route is defined by the `NODE` coordinate array in
 
 ### Obstacle avoidance
 
-`avoid()` uses the front-left and front-right sonar groups. It turns away from
-nearby obstacles, attempts to escape corner conditions and performs a reverse
-and a reverse/random-turn escape action if the robot is stationary away from its initial pose.
+`avoid()` uses the front-left and front-right sonar groups. It turns away from nearby obstacles, attempts to escape corner conditions and performs a reverse and random-turn escape action if the robot is stationary away from its initial pose.
 
 ### Visual target tracking
 
